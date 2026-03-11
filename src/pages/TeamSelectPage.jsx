@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import css from "./TeamSelectPage.module.css";
 import { getAllTeam } from "@/api/teamApi";
-import TeamCard from "@/components/teamCard";
+import TeamCard from "@/components/TeamCard";
 import { updateUserTeam } from "@/api/userApi";
-import { useNavigate  } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const TeamSelectPage = () => {
   // 상태: 모든 구단 정보, 선택한 구단 정보
@@ -31,13 +31,12 @@ const TeamSelectPage = () => {
   }, []);
 
   // 선택한 구단 서버에 업데이트
- const handleConfirmSelection = async () => {
+  const handleConfirmSelection = async () => {
     try {
       setLoading(true);
-      
+
       await updateUserTeam(1, selectedTeam);
       navigate("/?changed=1");
-      
     } catch (err) {
       console.error("구단 업데이트 실패:", err);
       alert("구단 선택에 실패했습니다. 다시 시도해주세요.");
