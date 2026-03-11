@@ -1,0 +1,52 @@
+.mainContainer {
+max-width: 1300px;
+  margin: 0 32px;
+  padding: 80px 20px 40px 20px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header h2 {
+    color: #333;
+}
+
+.teamGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-bottom: 40px;
+    margin: 0 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.postGrid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.confirmButton {
+    text-align: center;
+    padding: 15px 50px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    color: white;
+    background-color: #FF9899;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.confirmButton:hover {
+    background-color: #ff7a7a;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+}

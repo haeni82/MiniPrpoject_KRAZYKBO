@@ -1,0 +1,238 @@
+.mainContainer {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 100px 20px 40px 20px;
+}
+
+/* 소개 영역 */
+.introSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+  width: 100%;
+  margin-top: 40px;
+}
+
+/* 야구공 */
+.introImg {
+  display: block;
+  width: 150px;
+  height: auto; /* 원본 비율 유지 */
+  transform: rotate(-10deg); /* 회전 */
+  animation: bounce-slow 1.5s infinite ease-in-out;
+}
+
+@keyframes bounce-slow {
+  0%,
+  100% {
+    transform: rotate(-10deg) translateY(0);
+  }
+  50% {
+    transform: rotate(-10deg) translateY(-10px);
+  }
+}
+
+.introTitle {
+  text-align: center;
+  font-size: 70px;
+  font-weight: 800;
+  letter-spacing: 5px;
+  background: linear-gradient(to bottom, #ff9899, #ffafb0, #ffeacb);
+  background-clip: text;
+  color: transparent;
+}
+
+.introSubtitle {
+  font-size: 20px;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+/* 선택한 구단 없을 때 */
+.emptyBtn {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding: 20px 30px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  background: linear-gradient(to right, #ff9899, #febdbe);
+  color: white;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.emptyBtn:hover {
+  scale: 1.05;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.emptyBtn i,
+.emptyBtn p {
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+/* 선택한 구단 있을 때 */
+.teamContainer {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.teamIcon {
+  font-size: 60px;
+  text-align: center;
+  animation: wiggle 1.5s infinite ease-in-out;
+}
+
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+}
+
+.teamGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.teamGroup p {
+  font-size: 14px;
+  text-align: center;
+  color: #333;
+}
+
+.teamGroup h2 {
+  text-align: center;
+  padding: 0;
+  background: linear-gradient(to bottom, #ff9899, #ffafb0);
+  background-clip: text;
+  color: transparent;
+}
+
+/* 기능에 대한 정보들 */
+.featureContainer {
+  display: flex;
+  gap: 20px;
+  padding: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+.featureContainer div {
+  background: linear-gradient(to right, #ffafb051, #ffeacb80);
+  padding: 7px 15px;
+  border-radius: 30px;
+  font-size: 14px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 실시간 인기글 */
+.hotSection {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 10px;
+}
+
+.hotHeader {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.hotTitle {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.hotIcon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to bottom, #ff9899, #ffafb0);
+  border-radius: 10px;
+}
+
+.hotIcon i {
+  font-size: 16px;
+  color: white;
+  line-height: 1;
+}
+
+.hotTitle span {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+
+/* 전체 보기 */
+.allGroup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.allBtn {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  border: none;
+  outline: none;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  cursor: pointer;
+  background: none;
+  color: #777;
+}
+
+.allBtn:hover {
+  color: #FF9899;
+  scale: 1.05;
+}
+
+.allBtn i,
+.allBtn p {
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  text-align: center;
+}
+
+
+/* 게시글 영역 */
+.postGrid {
+  padding: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px
+}

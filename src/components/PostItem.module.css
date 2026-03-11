@@ -1,0 +1,81 @@
+/* 게시글 전체 스타일 */
+
+.postLink {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+}
+
+/* 카드 */
+
+.post {
+  border: 1px solid #77777761;
+  background-color: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.post:hover {
+  transform: scale(1.01) translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.category{
+    background: #003d821f;
+    border: none;
+    border-radius: 10px;
+    width: fit-content;
+    font-size: 10px;
+    color: #003d82;
+    padding: 3px 5px;
+    font-weight: 300;
+}
+
+.title {
+    padding-top: 10px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.postInfo{
+    display: flex;
+    justify-content: space-between;
+}
+
+.postInfo span {
+    color: #333;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+hr {
+  border: 0;
+  height: 0;
+  width: 100%;
+  border-top: 1px solid #77777761;
+  margin: 8px auto; 
+}
+
+.active,
+.group {
+    display: flex;
+    flex-direction: row;
+}
+
+.active {
+    gap: 10px;
+}
+
+.group {
+    gap: 6px;
+    font-size: 14px;
+}

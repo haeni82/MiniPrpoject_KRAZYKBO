@@ -1,0 +1,199 @@
+/* 슬라이더(배너) 전체 컨테이너 */
+.mainSlider {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  overflow: hidden;
+  border-radius: 15px;
+  border: 1.3px solid #ffafcc8c;
+  background: linear-gradient(45deg, #fff0f6, #fdf4e8);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4px);
+}
+
+.mainSlider:hover {
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* 슬라이더 바디로 블러가 적용될 영역 */
+.sliderBody {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;   /* Blur 레이어 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 블러 + 흐릿한 효과 */
+.canceled {
+  filter: grayscale(100%) blur(4px);
+  opacity: 0.5;
+}
+
+/* 경기 취소됐을 때  */
+.canceledText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  font-size: 35px;
+  font-weight: 700;
+  color: #fff;
+  padding: 10px 20px;
+  background: rgba(88, 88, 88, 0.7);
+  border-radius: 40px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* 인디케이터 컨테이너 */
+.indicatorContainer {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  gap: 10px;
+  z-index: 9999;
+}
+
+/* 인디케이터 버튼 기본 스타일 */
+.indicatorButton {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+
+/* 활성화된 인디케이터 스타일 */
+.active {
+  background-color: white;
+}
+
+
+
+/* 제목 스타일 */
+.date {
+  font-size: 1rem;
+  font-weight: 500;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin: 30px 0;
+}
+
+/* 점수 스타일 */
+.sliderContent {
+  display: flex;
+  gap: 150px;
+  padding: 20px 0;
+}
+
+/* 팀 정보 */
+.TeamGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.logoWrap {
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border: 2px solid #a2d2ff95;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.away {
+  border: 2px solid #ffafcc69;
+}
+
+.Logo {
+  font-size: 70px; /* 이모지 크기 */
+  line-height: 1; /* 세로 정렬 깔끔하게 */
+}
+
+.Name {
+  color: #333;
+  font-weight: bold;
+}
+
+/* 점수 영역 */
+.scoreGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.scoreGroup > div {
+  display: flex;
+  gap: 30px;
+}
+
+.score {
+  font-size: 60px;
+  font-weight: bold;
+  background: linear-gradient(45deg, #ffafb0, #ffeacb);
+  background-clip: text;
+  color: transparent;
+}
+
+.other {
+  background: linear-gradient(135deg, #ffeacb, #ffafb0);
+  background-clip: text;
+  color: transparent;
+}
+
+.isFinished {
+  background-color: #8d8d8d;
+  padding: 3px 10px;
+  border-radius: 30px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.detailBtn {
+  margin-bottom: 60px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(to right, #ff9899, #febdbe);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.detailBtn:hover {
+  scale: 1.05;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.detailBtn i,
+.detailBtn span {
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: white;
+}
+
+
